@@ -1,71 +1,104 @@
-<h1 align="center">📚 Geliştirici Kurulum Rehberi 🚀</h1>
+<h1 align="center">⚙️ Geliştirici Kurulum Rehberi</h1>
 
 <p align="center">
-  <i>“Kurulum yapmayı bilmeyen, kod yazamaz.” – Modern Zamanların Yazılımcısı</i>
+  <i>“Kodlayarak öğren, deneyerek ustalaş.”</i>
 </p>
 
 ---
 
-## 🧠 İçindekiler
+## 📑 İçindekiler
 
 - [NVM ile Node.js Kurulumu](#nvm-ile-nodejs-kurulumu)
-- [Python Virtualenv Kurulumu](#python-virtualenv-kurulumu)
-- [Python venv Modülü](#python-venv-modülü)
-- [Miniconda Kurulumu](#miniconda-kurulumu)
+- [Python Virtualenv ile Ortam Yönetimi](#python-virtualenv-ile-ortam-yönetimi)
+- [Python venv ile Ortam Kurulumu](#python-venv-ile-ortam-kurulumu)
+- [Miniconda ile Ortam Yönetimi](#miniconda-ile-ortam-yönetimi)
 - [WSL (Windows Subsystem for Linux) Kurulumu](#wsl-windows-subsystem-for-linux-kurulumu)
+- [HTML & CSS Örnek Kodlar](#html--css-örnek-kodlar)
 
 ---
 
-## 🟩 NVM ile Node.js Kurulumu
+## NVM ile Node.js Kurulumu
 
-📦 NVM (Node Version Manager), farklı Node sürümlerini aynı sistemde yönetmeni sağlar. Projeden projeye geçerken versiyon sorunları yaşamazsın.
+**NVM (Node Version Manager)**, birden fazla Node.js sürümünü aynı bilgisayarda kullanmanı sağlar. Eski projelerde eski sürüm, yenilerde en günceli kullanmak için birebir.
 
-### 🔧 Kurulum
+### Kurulum Adımları:
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-Kurulumdan sonra terminale şunu ekle:
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+Sonrasında ~/.bashrc, ~/.zshrc veya ~/.profile dosyana şu satırları ekle:
+
+bash
+Kopyala
+Düzenle
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-✅ Node.js Kur
+Node.js Kurulumu:
+bash
+Kopyala
+Düzenle
 nvm install --lts
 nvm use --lts
-🐍 Python Virtualenv Kurulumu
-🔧 Kurulum
+Python Virtualenv ile Ortam Yönetimi
+virtualenv, Python projeleri için izole ortamlar yaratmanı sağlar. Böylece her proje kendi bağımlılıklarını kullanır.
+
+Kurulum:
+bash
+Kopyala
+Düzenle
 pip install virtualenv
-🧪 Ortam Oluştur
-virtualenv myenv
-source myenv/bin/activate  # Linux/macOS
-.\myenv\Scripts\activate   # Windows
-🧬 Python venv Modülü
-Python 3.3+ ile gelen dahili araç. Ekstra modül gerekmez.
+Kullanım:
+bash
+Kopyala
+Düzenle
+virtualenv benim_ortam
+source benim_ortam/bin/activate  # Linux/macOS
+.\benim_ortam\Scripts\activate   # Windows
+Çıkmak için: deactivate
 
-🚀 Kullanım
-python3 -m venv myenv
-source myenv/bin/activate  # Linux/macOS
-.\myenv\Scripts\activate   # Windows
-🍃 Miniconda Kurulumu
-Anaconda’nın hafif versiyonu. Bilimsel işler, ML, veri bilimi için candır.
+Python venv ile Ortam Kurulumu
+Python 3.3 ve sonrasında gelen venv modülü, virtualenv’in yerleşik halidir.
 
-🔽 İndir
-👉 Miniconda İndir
+Ortam Oluşturma:
+bash
+Kopyala
+Düzenle
+python -m venv proje_env
+Ortamı Aktifleştirme:
+bash
+Kopyala
+Düzenle
+source proje_env/bin/activate  # Linux/macOS
+.\proje_env\Scripts\activate   # Windows
+Miniconda ile Ortam Yönetimi
+Miniconda, Anaconda’nın minimal sürümüdür. Özellikle veri bilimi projelerinde bağımlılık yönetimi için mükemmel bir araçtır.
 
-🧪 Ortam Oluştur
-conda create --name myenv python=3.11
-conda activate myenv
+İndirme:
+🔗 Miniconda İndirme Sayfası
 
-🧱 WSL (Windows Subsystem for Linux) Kurulumu
-Windows’ta Linux ortamı. Yani iki dünyanın da en iyisi. Batman vs Ironman gibi.
+Ortam Oluşturma:
+bash
+Kopyala
+Düzenle
+conda create --name veri_env python=3.11
+conda activate veri_env
+WSL (Windows Subsystem for Linux) Kurulumu
+Windows kullanıcıları için Linux ortamını yerel olarak çalıştırmanı sağlar. Kod yazarken gerçek Linux deneyimi yaşarsın.
 
-🏁 Kurulum
-
+WSL Kurulumu:
+powershell
+Kopyala
+Düzenle
 wsl --install
 Eğer hata alırsan:
 
+powershell
+Kopyala
+Düzenle
 wsl --set-default-version 2
-
-🐧 Dağıtım Seç
-
+Dağıtım Seçme:
+powershell
+Kopyala
+Düzenle
 wsl --list --online
 wsl --install -d Ubuntu
-
+Kurulum sonrası Ubuntu’yu açıp kullanıcı oluşturduğun anda Linux terminalin hazır 🎉
