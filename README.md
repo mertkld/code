@@ -1,12 +1,4 @@
-from pathlib import Path
 
-readme_content = """
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Environment Kurulum Rehberi</title>
-  <style>
     h1, h2 {
       color: #2c3e50;
       font-family: Arial, sans-serif;
@@ -79,9 +71,6 @@ wsl
 </html>
 """
 
-# Save as a .txt file
-file_path = Path("/mnt/data/kurulum_rehberi.txt")
-file_path.write_text(readme_content, encoding="utf-8")
 
 file_path
 
