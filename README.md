@@ -1,113 +1,87 @@
-# Work
+from pathlib import Path
 
-- [JavaScript](#JavaScript)
-  - [NVM](#nvm) 
-- [Python](#Python)
-  - [virtualenv](#virtualenv)
-  - [pyenv](#pyenv)
-- [WSL2](#WSL2)
+readme_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Environment Kurulum Rehberi</title>
+  <style>
+    h1, h2 {
+      color: #2c3e50;
+      font-family: Arial, sans-serif;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
 
-## JavaScript
+<h1>🚀 Ortam Kurulum Rehberi</h1>
+<p>Bu rehberde JavaScript için <code>nvm</code>, Python için <code>virtualenv</code>, <code>pyenv</code>, <code>miniconda</code> ve Windows ortamında Linux kullanmak için <code>WSL2</code> kurulumu detaylı şekilde anlatılmıştır.</p>
 
-## nvm
+<h2>📦 JavaScript - NVM Kurulumu</h2>
+<pre><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+nvm use --lts
+node -v
+npm -v
+</code></pre>
 
-<p>JavaScript'in farklı versiyonlarını kullanmak için kullanılır.</p>
+<h2>🐍 Python - virtualenv Kurulumu</h2>
+<pre><code>pip install virtualenv
+virtualenv venv
+source venv/bin/activate  # Windows için: .\\venv\\Scripts\\activate
+deactivate
+</code></pre>
 
-<h5>Kurulum:</h5>
+<h2>🧪 Python - pyenv Kurulumu</h2>
+<pre><code>curl https://pyenv.run | bash
 
-<ul>
-  <li>Windows: <a href="https://github.com/coreybutler/nvm-windows/releases">nvm-windows</a></li>
-  <li>Linux: <code> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash </code> </li>
-</ul>
-
-<p>Kurulumdan sonra Terminal(Shell)'i yeniden başlatın. Linux için: <code>exec "$SHELL"</code></p>
-<p>Sürümü kontrol edin: <code>nvm --version</code></p>
-
-<h5>Kullanım</h5>
-
-<ul>
-  <li><code>nvm install {sürüm} </code> Belirlenen sürümü indirmenizi olanak tanır. Örnek: <code>nvm install 8.0.0</code></li>
-  <li><code>nvm list </code> Yüklü olan sürümleri listeler.</li>
-  <li><code>nvm use {sürüm} </code> Belirlenen sürümü kullanır.</li>
-  <li><code>nvm run {sürüm} app.js </code> 'app.js'yi belirlenen sürüm ile çalıştırır.</li>
-</ul>
-
-## Python
-
-## virtualenv
-
-<p>Python'un farklı sürümlerini kullanarak sanal bir çalıştırma ortamı oluşturur. Böylece ana cihaza yüklemeye gerek kalmaz.</p>
-
-```mermaid
-graph LR
-  A[virtualenv] -->|Python3.9| Sanal-Ortam
-  B[virtualenv] -->|Python3.5| Sanal-Ortam
-  C[virtualenv] -->|Python3.0| Sanal-Ortam
-
-```
-
-
-<h5>Kurulum:</h5>
-
-<ul>
-  <li>Windows: <code>pip install virtualenv</code></li>
-  <li>Linux: <code>sudo apt install python3-virtualenv </code> ya da <code>pip install virtualenv</code></li>
-</ul>
-
-<h5>Kullanım</h5>
-
-NOT: Windows kullanıyorsanız <a href="https://apps.microsoft.com/detail/9n0dx20hk701?hl=tr-TR&gl=TR">Terminal</a> ya da <a href="https://apps.microsoft.com/detail/xp9khm4bk9fz7q?hl=tr-TR&gl=TR">Visual Studio Code</a> üzerinden çalıştırın.
-
-<ul>
-  <li><code>virtualenv {ortam adı} </code> Belirlenen ortam adı ile sanal çalışma dizini oluşturur. Örnek: <code>virtualenv ornekOrtam</code></li>
-  <li>Sanal Ortam dizinine gidin: <code>cd {ortam-adı} </code> Sanal Ortamı Çalıştırma: <code>source bin/activate</code> Eğer Windows ise: <code>source {ornekOrtam}/Scripts/activate.bat</code></li>
-  <li>Çalışma alanında çıkış yapmak için: <code>deactivate</code></li>
-</ul>
-
-## pyenv
-
-<p>Tıpkı nvm gibi, pyenv'de Python'un farklı sürümlerini kullanmanıza olanak tanıyor.</p>
-
-<h5>Kurulum</h5>
-
-<b>Windows</b>
-
-Windows için destek yok. Onun yerine WSL(Windows-Subsystem-Linux) ile Linux yerinden kurabilirsiniz.
-
-Linux:
-
-<code>curl -fsSL https://pyenv.run | bash</code>
-
-İndirmeti yaptıktan sonra ```~/.bashrc``` dosyasının en son satırına gidip aşağıdaki kodları ekleyin:
-
-```bash
+# .bashrc veya .zshrc içine ekle:
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-```
 
-Terminal(Shell)'i yeniden başlatın: <code>exec "$SHELL"</code>
+# terminali yeniden başlat
+pyenv install 3.11.7
+pyenv global 3.11.7
+python -V
+</code></pre>
 
-Şimdi kontrol edin: <code>pyenv</code>
+<h2>🔬 Python - Miniconda Kurulumu</h2>
+<pre><code># İndir: https://docs.conda.io/en/latest/miniconda.html
+bash Miniconda3-latest-Linux-x86_64.sh
+conda create -n myenv python=3.11
+conda activate myenv
+conda deactivate
+</code></pre>
 
-<h5>Kullanım</h5>
+<h2>🐧 WSL2 Kurulumu (Windows Subsystem for Linux)</h2>
+<pre><code>wsl --install
+wsl --set-default-version 2
+wsl --list --online
+wsl --install -d Ubuntu
+wsl
+</code></pre>
 
-<ul>
-  <li><code>pyenv install {sürüm}</code> Belirlenen Python sürümünü indirmenizi sağlar.</li>
-  <li><code>pyenv global {sürüm}</code> Belirlenen sürümü kullanıma alır.</li>
-</ul>
+</body>
+</html>
+"""
 
-## WSL2
+# Save as a .txt file
+file_path = Path("/mnt/data/kurulum_rehberi.txt")
+file_path.write_text(readme_content, encoding="utf-8")
 
-WSL2, Linux çekirdeğini kullanarak sanal makine işlevi görür. Hyper-V kullanarak Linux dağıtımını çalıştrır.
+file_path
 
-<h5>Kurulum</h5>
-
-```Denetim Masası > Programlar > Windows özelliklerini aç veya kapat > Linux için Windows Alt sistemi```
-Sonra cihazı yeniden başlatın..
-
-<code>wsl --install</code> ile indirmeyi başlatın.
-<code>wsl --set-default-version 2</code> ile sürümü 2 yapın.
-
-Microsoft Store Üzerinden ```Ubuntu```yu bulun ve indirin. İndirme yaptıktan sonra aratma yerine Ubuntu yazıp WSL2'yi kullanmaya başlayabilirsiniz.
