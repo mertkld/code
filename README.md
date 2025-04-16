@@ -1,1 +1,1 @@
-<h1  align="center" Kurulum Rehberi </h1>
+<h1  align="center"> Kurulum Rehberi </h1>
