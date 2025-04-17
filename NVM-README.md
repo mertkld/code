@@ -53,7 +53,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 ---
 
-## ⚙ NVM Komutları
+## NVM Komutları
 
 | Komut | Açıklama |
 |-------|----------|
@@ -63,7 +63,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 | `nvm use <versiyon>` | O sürüme geçiş yapar |
 | `nvm alias default <versiyon>` | Varsayılan sürümü belirler |
 
-🧪Örnekler:
+Örnekler:
 
 ```sh
 nvm install 18.17.0
@@ -94,10 +94,10 @@ dediğinde otomatik olarak o sürüme geçer.
 
 ## Avantajları
 
-- 🌀 Projeler arası geçişte Node sürüm derdi yaşamazsın  
-- 🧩 Global Node.js kurulumunu bozmaz  
-- 🪄 Kolay, sade ve güvenli yönetim  
-- 🧠 Sürüm uyumsuzluğu ve hata riskini minimuma indirir  
+- Projeler arası geçişte Node sürüm derdi yaşamazsın  
+- Global Node.js kurulumunu bozmaz  
+- Kolay, sade ve güvenli yönetim  
+- Sürüm uyumsuzluğu ve hata riskini minimuma indirir  
 
 ---
 
