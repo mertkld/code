@@ -10,30 +10,7 @@ Bu rehber, JavaScript için NVM, Python için virtualenv ve pyenv, Miniconda ve 
 - [WSL (Windows Subsystem for Linux) Kurulumu](#wsl-windows-subsystem-for-linux-kurulumu)
 
 
-## Python virtualenv Kurulumu
 
-virtualenv, izole Python ortamları oluşturmanıza olanak tanır.
-
-### Kurulum
-```sh
-# pip ile virtualenv kurulumu
-pip install virtualenv
-```
-
-### Kullanım
-```sh
-# Yeni bir sanal ortam oluştur
-virtualenv myenv
-
-# Sanal ortamı etkinleştir (Linux/macOS)
-source myenv/bin/activate
-
-# Sanal ortamı etkinleştir (Windows)
-myenv\Scripts\activate
-
-# Sanal ortamı devre dışı bırak
-deactivate
-```
 ## Python pyenv Kurulumu
 
 pyenv, birden fazla Python sürümünü yönetmenize olanak tanır.
@@ -43,7 +20,6 @@ pyenv, birden fazla Python sürümünü yönetmenize olanak tanır.
 # Gerekli bağımlılıkları kur (Ubuntu/Debian)
 sudo apt-get update
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
-
 # pyenv kurulumu
 curl https://pyenv.run | bash
 
