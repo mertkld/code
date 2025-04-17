@@ -41,6 +41,6 @@ nvm install 16.14.0
 nvm use 16.14.0
 ```
  Varsayılan Node.js sürümünü ayarla
- ```
+ ```sh
 nvm alias default 16.14.0
-```sh
+```
