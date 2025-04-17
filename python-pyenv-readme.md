@@ -1,4 +1,4 @@
-<h2 align="center">🐍 Python pyenv Kurulumu ve Kullanımı</h2>
+<h1 align="center"> Python pyenv Kurulumu ve Kullanımı</h1>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7397de76-b7e5-4dae-8128-d95303527193" width="700" alt="pyenv Logo"/>
@@ -8,7 +8,7 @@
 
 ---
 
-## 🧠 pyenv Nedir?
+##  pyenv Nedir?
 
 **pyenv**, birden fazla Python sürümünü sistemine kurmanı ve aralarında kolayca geçiş yapmanı sağlayan bir araçtır.
 
@@ -18,15 +18,15 @@
 
 ---
 
-## 🛠️ Kurulum (Linux & macOS)
+## 🛠 Kurulum (Linux & macOS)
 
-### 🔽 Otomatik Kurulum (cURL ile)
+###  Otomatik Kurulum (cURL ile)
 
 ```sh
 curl https://pyenv.run | bash
 ```
 
-### ⚙️ Ortam Değişkenleri (Kurulum sonrası)
+###  Ortam Değişkenleri (Kurulum sonrası)
 
 Aşağıdakileri `~/.bashrc`, `~/.zshrc` ya da kabuğuna göre uygun config dosyana ekle:
 
@@ -36,7 +36,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-👉 Ardından terminali yeniden başlat veya:
+ Ardından terminali yeniden başlat veya:
 
 ```sh
 source ~/.bashrc
@@ -44,7 +44,7 @@ source ~/.bashrc
 
 ---
 
-## 🪟 Windows için
+##  Windows için
 
 Windows kullanıcıları için `pyenv` yerine önerilen araç:  
 🔗 [pyenv-win GitHub](https://github.com/pyenv-win/pyenv-win)
@@ -53,21 +53,21 @@ Kurulum adımları orada detaylı açıklanmıştır.
 
 ---
 
-## 🚀 Kullanım
+##  Kullanım
 
-### 📌 Python Sürümü Kur
+###  Python Sürümü Kur
 
 ```sh
 pyenv install 3.11.8
 ```
 
-### 🔁 Varsayılan Sürümü Ayarla
+###  Varsayılan Sürümü Ayarla
 
 ```sh
 pyenv global 3.11.8
 ```
 
-### 📦 Projeye Özel Sürüm Ayarla
+###  Projeye Özel Sürüm Ayarla
 
 Proje dizininde:
 
@@ -79,7 +79,7 @@ pyenv local 3.10.6
 
 ---
 
-## 🧪 Faydalı Komutlar
+##  Faydalı Komutlar
 
 | Komut | Açıklama |
 |-------|----------|
@@ -90,7 +90,7 @@ pyenv local 3.10.6
 
 ---
 
-## 📦 pyenv + virtualenv
+##  pyenv + virtualenv
 
 ```sh
 # pyenv ile virtualenv kur
