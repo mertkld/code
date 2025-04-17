@@ -1,13 +1,12 @@
 # NVM (Node Version Manager) Kurulumu
 
 NVM, birden fazla Node.js sürümünü yönetmenize olanak tanıyan bir araçtır.
+##Linux ve macOS için Kurulum
 
- Linux ve macOS için Kurulum
-
- NVM kurulum scripti indirilir
+###NVM kurulum scripti indirilir
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
- veya wget ile
+### veya wget ile
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
  Kurulumdan sonra terminali yeniden başlatın veya aşağıdaki komutu çalıştırın:
