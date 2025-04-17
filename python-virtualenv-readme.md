@@ -1,4 +1,4 @@
-## 🐍 Python Virtual Environment (Sanal Ortam) Kurulumu
+<h1 align="center">Python Virtual Environment (Sanal Ortam) Kurulumu</h1> 
 
 Python projelerinde bağımlılıkları izole tutmak için **virtual environment** kullanmak büyük önem taşır.  
 Her projeye özel bir ortam oluşturarak, paketlerin çakışmasını engelleyebilirsin.
