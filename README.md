@@ -5,55 +5,13 @@ Bu rehber, JavaScript için NVM, Python için virtualenv ve pyenv, Miniconda ve 
 ## İçindekiler
 - [NVM (Node Version Manager) Kurulumu](NVM.md)
 - [Python virtualenv Kurulumu](Python-Virtualenv.md)
-- [Python pyenv Kurulumu](#python-pyenv-kurulumu)
+- [Python pyenv Kurulumu](PYENV.md)
 - [Miniconda Kurulumu](#miniconda-kurulumu)
 - [WSL (Windows Subsystem for Linux) Kurulumu](#wsl-windows-subsystem-for-linux-kurulumu)
 
 
 
-## Python pyenv Kurulumu
 
-pyenv, birden fazla Python sürümünü yönetmenize olanak tanır.
-
-### Linux ve macOS için Kurulum
-
-# Gerekli bağımlılıkları kur (Ubuntu/Debian)
-sudo apt-get update
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
-# pyenv kurulumu
-curl https://pyenv.run | bash
-
-Kurulumdan sonra .bashrc veya .zshrc dosyanıza aşağıdaki satırları ekleyin:
-
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-
-### Windows için Kurulum
-
-Windows için pyenv-win kullanabilirsiniz:
-
-1. PowerShell'i yönetici olarak açın
-2. Aşağıdaki komutu çalıştırın:
-
-Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
-
-### pyenv Kullanımı
-
-# Kullanılabilir Python sürümlerini listele
-pyenv install --list
-
-# Belirli bir Python sürümünü yükle
-pyenv install 3.9.10
-
-# Global Python sürümünü ayarla
-pyenv global 3.9.10
-
-# Yerel Python sürümünü ayarla (proje bazlı)
-pyenv local 3.9.10
-
-# Mevcut Python sürümünü kontrol et
-pyenv version
 
 ## Miniconda Kurulumu
 
