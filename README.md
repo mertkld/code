@@ -176,6 +176,5 @@ wsl --unregister Ubuntu
 
 ---
 
-Bu rehberi kendi projelerinize göre düzenleyebilirsiniz. Her bir aracın versiyonları ve komutları güncellenebilir, bu nedenle kurulum öncesinde resmi dokümantasyonu kontrol etmeniz önerilir.
 
 --nvm list 
