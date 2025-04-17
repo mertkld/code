@@ -5,7 +5,7 @@ Her projeye özel bir ortam oluşturarak, paketlerin çakışmasını engelleyeb
 
 ---
 
-### ✅ 1. `venv` ile Sanal Ortam Kurulumu (Python 3.3+)
+##  1. `venv` ile Sanal Ortam Kurulumu (Python 3.3+)
 
 ```sh
 # Ortamı oluştur
@@ -22,11 +22,11 @@ venv\Scripts\activate
 deactivate
 ```
 
-> 🔍 `venv`, Python’ın yerleşik modülüdür. Harici kurulum gerekmez.
+>  `venv`, Python’ın yerleşik modülüdür. Harici kurulum gerekmez.
 
 ---
 
-### 🚀 2. `virtualenv` ile Sanal Ortam (Daha Esnek)
+###  2. `virtualenv` ile Sanal Ortam (Daha Esnek)
 
 ```sh
 # Kurulum
@@ -40,19 +40,19 @@ source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 ```
 
-> ⚙️ `virtualenv`, eski Python sürümleriyle uyumludur ve daha fazla kontrol sunar.
+>  `virtualenv`, eski Python sürümleriyle uyumludur ve daha fazla kontrol sunar.
 
 ---
 
-### 💡 Notlar
+###  Notlar
 
 - Sanal ortamda olduğunda terminal prompt'unda genellikle `(venv)` gibi bir ibare görünür.
 - Ortam aktifken `pip install` komutları sadece o ortama kurulum yapar.
-- Her projede bir `venv/` klasörü oluşturmak, iyi bir geliştirici alışkanlığıdır. 🧠
+- Her projede bir `venv/` klasörü oluşturmak, iyi bir geliştirici alışkanlığıdır. 
 
 ---
 
-### 📦 `.gitignore` Hatırlatması
+###  `.gitignore` Hatırlatması
 
 Sanal ortam klasörünü Git'e dahil etmemelisin. `.gitignore` dosyana şunu ekle:
 
@@ -62,7 +62,7 @@ venv/
 
 ---
 
-### 📁 Proje Yapısı Örneği
+###  Proje Yapısı Örneği
 
 ```plaintext
 my-project/
@@ -74,7 +74,7 @@ my-project/
 
 ---
 
-### 📌 Ekstra: Paketleri Kaydetmek ve Yüklemek
+###  Ekstra: Paketleri Kaydetmek ve Yüklemek
 
 ```sh
 # Tüm kurulu paketleri requirements.txt'ye yaz
@@ -86,6 +86,3 @@ pip install -r requirements.txt
 
 ---
 
-<p align="center">
-  <sub>Python ortamını temiz tut. Her proje kendi kum havuzunda oynasın 🏖️</sub>
-</p>
