@@ -1,7 +1,7 @@
 
-<p align="center">
-<h1>NVM (Node Version Manager) Kurulumu</h1>
-</p>
+
+<h1 align="center">NVM (Node Version Manager) Kurulumu</h1>
+
 
 
 **NVM (Node Version Manager), adından da anlaşılacağı gibi bir Node.js sürüm yöneticisidir.
