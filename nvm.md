@@ -1,6 +1,6 @@
 
 <p align="center">
-# NVM (Node Version Manager) Kurulumu
+<h1>NVM (Node Version Manager) Kurulumu</h1>
 </p>
 
 
