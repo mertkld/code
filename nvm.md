@@ -1,4 +1,4 @@
-### NVM (Node Version Manager) Kurulumu
+# NVM (Node Version Manager) Kurulumu
 
 NVM, birden fazla Node.js sürümünü yönetmenize olanak tanıyan bir araçtır.
 
