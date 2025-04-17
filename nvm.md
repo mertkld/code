@@ -24,19 +24,19 @@ Windows'ta NVM-Windows'u kullanabilirsiniz:
 ```
 ## NVM Kullanımı
 
- Mevcut Node.js sürümlerini listele
+**Mevcut Node.js sürümlerini listele**
  ```sh
 nvm ls
 ```
- Kullanılabilir Node.js sürümlerini listele
+**Kullanılabilir Node.js sürümlerini listele**
  ```sh
 nvm ls-remote
 ```
- Belirli bir Node.js sürümünü yükle
+**Belirli bir Node.js sürümünü yükle**
  ```sh
 nvm install 16.14.0
 ```
- Belirli bir sürüme geç
+**Belirli bir sürüme geç**
  ```sh
 nvm use 16.14.0
 ```
