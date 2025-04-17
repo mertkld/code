@@ -3,53 +3,12 @@
 Bu rehber, JavaScript için NVM, Python için virtualenv ve pyenv, Miniconda ve WSL kurulumlarını adım adım anlatmaktadır.
 
 ## İçindekiler
-- [NVM (Node Version Manager) Kurulumu](#nvm-node-version-manager-kurulumu)
+- [NVM (Node Version Manager) Kurulumu](nvm.md)
 - [Python virtualenv Kurulumu](#python-virtualenv-kurulumu)
 - [Python pyenv Kurulumu](#python-pyenv-kurulumu)
 - [Miniconda Kurulumu](#miniconda-kurulumu)
 - [WSL (Windows Subsystem for Linux) Kurulumu](#wsl-windows-subsystem-for-linux-kurulumu)
 
-## NVM (Node Version Manager) Kurulumu
-
-NVM, birden fazla Node.js sürümünü yönetmenize olanak tanıyan bir araçtır.
-
-### Linux ve macOS için Kurulum
-
-# NVM kurulum scripti indirilir
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-
-# veya wget ile
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-
-Kurulumdan sonra terminali yeniden başlatın veya aşağıdaki komutu çalıştırın:
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-### Windows için Kurulum
-
-Windows'ta NVM-Windows'u kullanabilirsiniz:
-
-1. [NVM-Windows](https://github.com/coreybutler/nvm-windows/releases) adresinden en son sürümü indirin
-2. İndirilen kurulum dosyasını çalıştırın
-3. Kurulum adımlarını takip edin
-
-### NVM Kullanımı
-
-# Mevcut Node.js sürümlerini listele
-nvm ls
-
-# Kullanılabilir Node.js sürümlerini listele
-nvm ls-remote
-
-# Belirli bir Node.js sürümünü yükle
-nvm install 16.14.0
-
-# Belirli bir sürüme geç
-nvm use 16.14.0
-
-# Varsayılan Node.js sürümünü ayarla
-nvm alias default 16.14.0
 
 ## Python virtualenv Kurulumu
 
