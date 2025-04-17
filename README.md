@@ -3,7 +3,7 @@
 Bu rehber, JavaScript için NVM, Python için virtualenv ve pyenv, Miniconda ve WSL kurulumlarını adım adım anlatmaktadır.
 
 ## İçindekiler
-- [NVM (Node Version Manager) Kurulumu](nvm.md)
+- [NVM (Node Version Manager) Kurulumu](NVM.md)
 - [Python virtualenv Kurulumu](#python-virtualenv-kurulumu)
 - [Python pyenv Kurulumu](#python-pyenv-kurulumu)
 - [Miniconda Kurulumu](#miniconda-kurulumu)
