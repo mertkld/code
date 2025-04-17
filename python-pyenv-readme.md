@@ -108,6 +108,3 @@ pyenv deactivate
 
 ---
 
-<p align="center">
-  <sub>Her projeye özel Python, her ortama özel düzen. 🐍</sub>
-</p>
