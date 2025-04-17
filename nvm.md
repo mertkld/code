@@ -18,7 +18,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 Windows'ta NVM-Windows'u kullanabilirsiniz:
 ```sh
-1. [NVM-Windows](https://github.com/coreybutler/nvm-windows/releases) adresinden en son sürümü indirin
+# 1. [NVM-Windows](https://github.com/coreybutler/nvm-windows/releases) adresinden en son sürümü indirin
 2. İndirilen kurulum dosyasını çalıştırın
 3. Kurulum adımlarını takip edin
 ```
