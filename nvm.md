@@ -1,7 +1,7 @@
 ![Node.js](https://img.shields.io/badge/node-18-green)
 
 # NVM (Node Version Manager) Kurulumu
-![Uygulama Arayüzü](cover.jpg)
+![Uygulama Arayüzü](ssd.png)
 
 
 **NVM, birden fazla Node.js sürümünü yönetmenize olanak tanıyan bir araçtır.**
