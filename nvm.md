@@ -2,7 +2,7 @@
 
 NVM, birden fazla Node.js sürümünü yönetmenize olanak tanıyan bir araçtır.
 
-## Linux ve macOS için Kurulum
+# Linux ve macOS için Kurulum
 
 # NVM kurulum scripti indirilir
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
@@ -23,7 +23,7 @@ Windows'ta NVM-Windows'u kullanabilirsiniz:
 2. İndirilen kurulum dosyasını çalıştırın
 3. Kurulum adımlarını takip edin
 
-### NVM Kullanımı
+## NVM Kullanımı
 
 # Mevcut Node.js sürümlerini listele
 nvm ls
