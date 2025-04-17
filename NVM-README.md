@@ -10,11 +10,9 @@
 
 **NVM (Node Version Manager)**, adından da anlaşılacağı gibi bir **Node.js sürüm yöneticisidir.**  
 Bilgisayarına birden fazla **Node sürümünü aynı anda kurmanı**, aralarında kolayca geçiş yapmanı sağlar.  
-
 Bu sayede her proje için ihtiyaç duyduğun **farklı Node.js versiyonlarını sorunsuz bir şekilde** yönetebilirsin.
 
-Kısaca: `nvm use 16`, `nvm use 18` diyerek ortama ışınlanırsın.  
-Sistemine karışmaz, root izin istemez, her şey kontrollü!
+
 
 ---
 
