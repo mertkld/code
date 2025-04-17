@@ -9,7 +9,8 @@
 
 
 
-**NVM, birden fazla Node.js sürümünü yönetmenize olanak tanıyan bir araçtır.**
+**NVM (Node Version Manager), adından da anlaşılacağı gibi bir Node.js sürüm yöneticisidir.
+Bilgisayarında birden fazla Node sürümünü aynı anda kurmanı, aralarında kolayca geçiş yapmanı sağlar.**
 ## Linux ve macOS için Kurulum
 
 ### NVM kurulum scripti indirilir
