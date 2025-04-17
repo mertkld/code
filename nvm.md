@@ -21,7 +21,7 @@ Windows'ta NVM-Windows'u kullanabilirsiniz:
 1. [NVM-Windows](https://github.com/coreybutler/nvm-windows/releases) adresinden en son sürümü indirin
 2. İndirilen kurulum dosyasını çalıştırın
 3. Kurulum adımlarını takip edin
-```sh
+```
 ## NVM Kullanımı
 
  Mevcut Node.js sürümlerini listele
