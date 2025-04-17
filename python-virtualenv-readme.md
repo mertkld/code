@@ -2,6 +2,7 @@
 
 Python projelerinde bağımlılıkları izole tutmak için **virtual environment** kullanmak büyük önem taşır.  
 Her projeye özel bir ortam oluşturarak, paketlerin çakışmasını engelleyebilirsin.
+Kısacası karışıklıklar önlenebilir ve paketleri doğru şekilde kullanmamıza olanak tanır
 
 
 
