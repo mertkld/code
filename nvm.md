@@ -1,4 +1,4 @@
-![Node.js](https://img.shields.io/badge/node-18-green)
+
 
 # NVM (Node Version Manager) Kurulumu
 ![Uygulama Arayüzü](C:\Users\Mert\Desktop\mert\ssd.png)
