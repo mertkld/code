@@ -1,4 +1,4 @@
-<h1 align="center">🚀 NVM (Node Version Manager) Kurulumu & Kullanımı</h1>
+<h1 align="center"> NVM (Node Version Manager) Kurulumu & Kullanımı</h1>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a96dd5ca-3286-4e08-8303-577172a61761" width="500" alt="NVM Demo Görseli"/>
@@ -6,35 +6,35 @@
 
 ---
 
-## 🧠 NVM Nedir?
+##  NVM Nedir?
 
 **NVM (Node Version Manager)**, adından da anlaşılacağı gibi bir **Node.js sürüm yöneticisidir.**  
 Bilgisayarına birden fazla **Node sürümünü aynı anda kurmanı**, aralarında kolayca geçiş yapmanı sağlar.  
 
 Bu sayede her proje için ihtiyaç duyduğun **farklı Node.js versiyonlarını sorunsuz bir şekilde** yönetebilirsin.
 
-📌 Kısaca: `nvm use 16`, `nvm use 18` diyerek ortama ışınlanırsın.  
-🥷 Sistemine karışmaz, root izin istemez, her şey kontrollü!
+Kısaca: `nvm use 16`, `nvm use 18` diyerek ortama ışınlanırsın.  
+Sistemine karışmaz, root izin istemez, her şey kontrollü!
 
 ---
 
-## 🖥️ Kurulum
+## Kurulum
 
-### 🐧 Linux & macOS İçin
+### Linux & macOS İçin
 
-#### 🔽 Kurulum Scripti (cURL)
+#### Kurulum Scripti (cURL)
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ```
 
-#### 🔽 Alternatif: wget
+#### Alternatif: wget
 
 ```sh
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ```
 
-🌀 Kurulumdan sonra terminali yeniden başlatın veya elle kaynak dosyasını çalıştırın:
+ Kurulumdan sonra terminali yeniden başlatın veya elle kaynak dosyasını çalıştırın:
 
 ```sh
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -43,7 +43,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 ---
 
-### 🪟 Windows İçin
+###  Windows İçin
 
 **NVM-Windows kullanılır (resmi değil ama kararlı).**
 
@@ -51,11 +51,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 2. En son `.exe` dosyasını indirin  
 3. Kurulum adımlarını takip edin
 
-> 💡 Kurulum sırasında Node.js yolunu ve indirilecek dizini dikkatlice seçin.
+>  Kurulum sırasında Node.js yolunu ve indirilecek dizini dikkatlice seçin.
 
 ---
 
-## ⚙️ NVM Komutları
+## ⚙ NVM Komutları
 
 | Komut | Açıklama |
 |-------|----------|
@@ -65,7 +65,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 | `nvm use <versiyon>` | O sürüme geçiş yapar |
 | `nvm alias default <versiyon>` | Varsayılan sürümü belirler |
 
-🧪 Örnekler:
+🧪Örnekler:
 
 ```sh
 nvm install 18.17.0
@@ -75,7 +75,7 @@ nvm alias default 18.17.0
 
 ---
 
-## 📦 Proje Bazlı Kullanım
+##  Proje Bazlı Kullanım
 
 Bir projeye `.nvmrc` adında bir dosya ekleyip içine şu satırı yazarsan:
 
@@ -90,11 +90,11 @@ nvm use
 ```
 
 dediğinde otomatik olarak o sürüme geçer.  
-✨ Takım çalışmaları için altın değerinde bir alışkanlık.
+
 
 ---
 
-## ✅ Avantajları
+## Avantajları
 
 - 🌀 Projeler arası geçişte Node sürüm derdi yaşamazsın  
 - 🧩 Global Node.js kurulumunu bozmaz  
@@ -103,13 +103,10 @@ dediğinde otomatik olarak o sürüme geçer.
 
 ---
 
-## 🧭 Daha Fazla Bilgi
+## Daha Fazla Bilgi İçin
 
 🔗 [Resmi NVM GitHub Sayfası](https://github.com/nvm-sh/nvm)  
 🔗 [NVM-Windows (coreybutler)](https://github.com/coreybutler/nvm-windows)
 
 ---
 
-<p align="center">
-  <sub>README ❤️ ile yazıldı. Kodlar seninle olsun!</sub>
-</p>
