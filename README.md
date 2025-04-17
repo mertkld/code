@@ -56,12 +56,13 @@ nvm alias default 16.14.0
 virtualenv, izole Python ortamları oluşturmanıza olanak tanır.
 
 ### Kurulum
-
+```sh
 # pip ile virtualenv kurulumu
 pip install virtualenv
+```
 
 ### Kullanım
-
+```sh
 # Yeni bir sanal ortam oluştur
 virtualenv myenv
 
@@ -73,7 +74,7 @@ myenv\Scripts\activate
 
 # Sanal ortamı devre dışı bırak
 deactivate
-
+```
 ## Python pyenv Kurulumu
 
 pyenv, birden fazla Python sürümünü yönetmenize olanak tanır.
@@ -217,3 +218,5 @@ wsl --unregister Ubuntu
 ---
 
 Bu rehberi kendi projelerinize göre düzenleyebilirsiniz. Her bir aracın versiyonları ve komutları güncellenebilir, bu nedenle kurulum öncesinde resmi dokümantasyonu kontrol etmeniz önerilir.
+
+--nvm list 
