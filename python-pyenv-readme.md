@@ -1,7 +1,7 @@
 <h2 align="center">🐍 Python pyenv Kurulumu ve Kullanımı</h2>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7397de76-b7e5-4dae-8128-d95303527193" width="300" alt="pyenv Logo"/>
+  <img src="https://github.com/user-attachments/assets/7397de76-b7e5-4dae-8128-d95303527193" width="1000" alt="pyenv Logo"/>
 </p>
 
 
