@@ -18,7 +18,7 @@
 
 ---
 
-## 🛠 Kurulum (Linux & macOS)
+##  Kurulum (Linux & macOS)
 
 ###  Otomatik Kurulum (cURL ile)
 
