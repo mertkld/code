@@ -22,7 +22,7 @@ Windows'ta NVM-Windows'u kullanabilirsiniz:
 2. İndirilen kurulum dosyasını çalıştırın
 3. Kurulum adımlarını takip edin
 ```sh
- NVM Kullanımı
+## NVM Kullanımı
 
  Mevcut Node.js sürümlerini listele
  ```sh
