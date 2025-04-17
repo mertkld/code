@@ -1,7 +1,8 @@
 
 
 # NVM (Node Version Manager) Kurulumu
-![Uygulama Arayüzü](C:\Users\Mert\Desktop\mert\ssd.png)
+
+![ssd](https://github.com/user-attachments/assets/a96dd5ca-3286-4e08-8303-577172a61761)
 
 
 **NVM, birden fazla Node.js sürümünü yönetmenize olanak tanıyan bir araçtır.**
