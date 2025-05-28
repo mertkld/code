@@ -1,18 +1,17 @@
-# NVM (Node Version Manager) Kurulumu & Kullanımı
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a96dd5ca-3286-4e08-8303-577172a61761" width="500" alt="NVM Demo Görseli"/>
-</p>
+<h1 align="center"> Miniconda Kurulumu & Kullanımı</h1>  
+<p align="center">  
+  <img src="https://repository-images.githubusercontent.com/11167550/6b3b7580-bac8-11ea-893e-f646551f4a70" width="500" alt="Miniconda Demo Görseli"/>
+</p>  
 
 ---
 
-## NVM Nedir?
+## Miniconda Nedir?
 
-**NVM (Node Version Manager)**, adından da anlaşılacağı gibi bir **Node.js sürüm yöneticisidir.** 
+**Miniconda**, Anaconda'nın daha sade, daha hafif bir versiyonudur.  
+Sadece temel **Conda paket yöneticisi**, Python ve birkaç temel araçla gelir.  
 
-Bilgisayarına birden fazla **Node sürümünü aynı anda kurmanı**, aralarında kolayca geçiş yapmanı sağlar. 
-
-Bu sayede her proje için ihtiyaç duyduğun **farklı Node.js versiyonlarını sorunsuz bir şekilde** yönetebilirsin.
+> Koca bir yükleme yerine **minimalist, hızlı ve özelleştirilebilir bir ortam** isteyenlerin tercihi.
 
 ---
 
@@ -20,88 +19,134 @@ Bu sayede her proje için ihtiyaç duyduğun **farklı Node.js versiyonlarını 
 
 ### Linux & macOS İçin
 
-#### Kurulum Scripti (cURL)
+#### 1. Script ile Kurulum (64-bit)
 
-```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-```
+\`\`\`sh
+# Python 3.11 içeren Miniconda sürümünü indir
+wget https://repo.anaconda.com/miniconda/Miniconda3-py311_24.1.2-0-Linux-x86_64.sh
 
-#### Alternatif: wget
+# Script'e çalıştırma izni ver ve çalıştır
+chmod +x Miniconda3-py311_24.1.2-0-Linux-x86_64.sh
+./Miniconda3-py311_24.1.2-0-Linux-x86_64.sh
+\`\`\`
 
-```sh
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-```
+Kurulum sırasında:
 
-Kurulumdan sonra terminali yeniden başlatın veya elle kaynak dosyasını çalıştırın:
+- Lisans sözleşmesini onayla  
+- Kurulum dizinini seç  
+- \`conda init\` sorusuna \`yes\` diyerek otomatik yapılandırmayı yap  
 
-```sh
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-```
+Sonrasında terminali yeniden başlat. 🎯
 
 ---
 
 ### Windows İçin
 
-**NVM-Windows kullanılır (resmi değil ama kararlı).**
+1. [Miniconda Windows Installer (64-bit)](https://docs.conda.io/en/latest/miniconda.html#windows-installers) bağlantısına tıkla  
+2. En son \`.exe\` dosyasını indir  
+3. Kurulum sırasında:
 
-1. [NVM-Windows Releases](https://github.com/coreybutler/nvm-windows/releases) sayfasına gidin
-2. En son `.exe` dosyasını indirin
-3. Kurulum adımlarını takip edin
+   - “Add Miniconda to PATH” seçeneğini **isteğe bağlı olarak** işaretle (genellikle önerilmez)  
+   - “Register Miniconda as default Python” seçeneğini işaretle  
 
-> Kurulum sırasında Node.js yolunu ve indirilecek dizini dikkatlice seçin.
+> Ardından Windows Terminal’i aç ve kontrol et:  
+\`\`\`sh
+conda --version
+\`\`\`
 
 ---
 
-## NVM Komutları
+## Temel Conda Komutları
 
 | Komut | Açıklama |
 |-------|----------|
-| `nvm ls` | Yüklü Node.js sürümlerini listeler |
-| `nvm ls-remote` | Kullanılabilir tüm sürümleri listeler |
-| `nvm install <versiyon>` | Belirtilen Node.js sürümünü kurar |
-| `nvm use <versiyon>` | O sürüme geçiş yapar |
-| `nvm alias default <versiyon>` | Varsayılan sürümü belirler |
-
-Örnekler:
-
-```sh
-nvm install 18.17.0
-nvm use 18.17.0
-nvm alias default 18.17.0
-```
+| \`conda create -n <isim> python=3.11\` | Yeni bir ortam oluşturur |
+| \`conda activate <isim>\` | Ortamı aktif eder |
+| \`conda deactivate\` | Aktif ortamdan çıkar |
+| \`conda install <paket>\` | Paket kurar |
+| \`conda env list\` | Tüm ortamları listeler |
+| \`conda remove -n <isim> --all\` | Ortamı tamamen siler |
 
 ---
 
 ## Proje Bazlı Kullanım
 
-Bir projeye `.nvmrc` adında bir dosya ekleyip içine şu satırı yazarsan:
+Her proje için ayrı bir ortam = **sıfır sürüm çatışması, maksimum huzur**
 
-```txt
-18.17.0
-```
+Örnek:
 
-Ardından terminalde bulunduğun klasörde:
+\`\`\`sh
+conda create -n proje1 python=3.10
+conda activate proje1
+\`\`\`
 
-```sh
-nvm use
-```
-
-dediğinde otomatik olarak o sürüme geçer.
+\`.env\` veya \`environment.yml\` dosyası ile daha profesyonel bir yaklaşım da mümkün.  
 
 ---
 
 ## Avantajları
 
-- Projeler arası geçişte Node sürüm derdi yaşamazsın
-- Global Node.js kurulumunu bozmaz
-- Kolay, sade ve güvenli yönetim
-- Sürüm uyumsuzluğu ve hata riskini minimuma indirir
+- Hafif, hızlı, sade 🪶  
+- Python sürümleri arasında geçiş kolay  
+- Sanal ortamlar izole = projeler arası güvenlik  
+- Anaconda gibi dev bir yapı yerine “gerektiği kadar” yük  
 
 ---
 
 ## Daha Fazla Bilgi İçin
 
-🔗 [Resmi NVM GitHub Sayfası](https://github.com/nvm-sh/nvm)
+🔗 [Miniconda Resmi Dokümantasyonu](https://docs.conda.io/en/latest/miniconda.html)  
+🔗 [Conda Komut Referansı](https://docs.conda.io/projects/conda/en/latest/commands.html)  
 
-🔗 [NVM-Windows (coreybutler)](https://github.com/coreybutler/nvm-windows)
+---
+
+Hazırsan conda dünyasına adım at, hafiflik senin yeni süper gücün 🧙‍♂️  
+Bir terminal, bir miniconda ve sen...  
+Gerisi sadece \`conda activate\` ✨
+
+---
+
+## Windows İçin Detaylı Kurulum
+
+### 1. Miniconda İndir
+
+🔗 [Miniconda Windows Installer (64-bit)](https://docs.conda.io/en/latest/miniconda.html#windows-installers)  
+Sayfadan Python 3.x sürümünü içeren `.exe` dosyasını indir.
+
+### 2. Kurulumu Başlat
+
+İndirilen `.exe` dosyasına çift tıkla ve adımları takip et:
+
+- **Welcome** ekranında "Next"  
+- **License Agreement** → "I Agree"  
+- **Installation Type** → "Just Me" seç (genel sistem değişikliği istemiyorsan)  
+- **Install Location** → Kendi klasörünü seçebilir veya varsayılanı kullanabilirsin  
+- **Advanced Options** kısmında:
+  - ✔ “Add Miniconda3 to my PATH environment variable” **işaretleme (önerilmez)**  
+  - ✔ “Register Miniconda3 as the system Python 3.x” → **işaretle**
+
+Kurulum tamamlandıktan sonra:
+
+### 3. Başlat ve Kontrol Et
+
+Başlat menüsünden “Anaconda Prompt” veya “Miniconda Prompt”u aç.
+
+Kontrol etmek için:
+
+```sh
+conda --version
+```
+
+Her şey doğruysa sürüm numarasını görürsün.
+
+### 4. Ortam Oluştur ve Kullan
+
+```sh
+conda create -n myenv python=3.11
+conda activate myenv
+```
+
+Artık bu ortam içinde Python projelerini güvenle çalıştırabilirsin 🔒🐍
+
+---
+
